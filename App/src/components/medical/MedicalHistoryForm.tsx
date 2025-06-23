@@ -561,24 +561,24 @@ const MedicalHistoryForm: React.FC = () => {
           </div>
         );
 
-      case 'presentingComplaint':
-      case 'pastIllnesses':
-      case 'familyHistory':
-      case 'emotionalState':
-      case 'treatmentGoal':
-        return (
-          <div className="space-y-2">
-            <label className="block text-sm font-medium text-charcoal-dark">
-              {field.split(/(?=[A-Z])/).join(' ')}*
-            </label>
-            <textarea
-              value={formData[field]}
-              onChange={(e) => handleInputChange(field, e.target.value)}
-              className="w-full h-32 p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent resize-none"
-              required
-            />
-          </div>
-        );
+      // case 'presentingComplaint':
+      // case 'pastIllnesses':
+      // case 'familyHistory':
+      // case 'emotionalState':
+      // case 'treatmentGoal':
+      //   return (
+      //     <div className="space-y-2">
+      //       <label className="block text-sm font-medium text-charcoal-dark">
+      //         {field.split(/(?=[A-Z])/).join(' ')}*
+      //       </label>
+      //       <textarea
+      //         value={formData[field]}
+      //         onChange={(e) => handleInputChange(field, e.target.value)}
+      //         className="w-full h-32 p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent resize-none"
+      //         required
+      //       />
+      //     </div>
+      //   );
 
       case 'whatsapp':
         return (
