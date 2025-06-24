@@ -2,21 +2,101 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, ArrowRight, ArrowDown, Heart, Users, Globe, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { AnimatedStats } from '@/components/animated-stats';
-import { HeroSection } from './Results';
 
 
-export function ModernHeroSection() {
+interface ModernHeroSectionProps {
+  quotes?: string[];
+  subtitle?: string;
+  trustIndicators?: {
+    icon: React.ReactNode;
+    text: string;
+    color: string;
+  }[];
+  primaryCta?: {
+    text: string;
+    onClick?: () => void;
+  };
+  secondaryCta?: {
+    text: string;
+    href: string;
+  };
+  centralVisual?: {
+    mainIcon: React.ReactNode;
+    mainText: string;
+    orbitingItems: {
+      icon: string;
+      label: string;
+      angle: number;
+    }[];
+  };
+  showScrollIndicator?: boolean;
+  backgroundColors?: {
+    from: string;
+    via: string;
+    to: string;
+  };
+  floatingCards?: {
+    topRight?: {
+      text: string;
+    };
+    bottomLeft?: {
+      text: string;
+    };
+  };
+}
+
+export function ModernHeroSection({
+  quotes = [
+    "One Body. Five Paths. One Healing Journey.",
+    "Your personalized team of 5 expert healers.",
+    "Healing in harmony, not alone."
+  ],
+  subtitle = "Unlike anything you've seen before — ekaBrahmaa brings Ayurveda, Nutrition, Yoga, Psychology, and Functional Movement together, so you don't heal alone — you heal in harmony.",
+  trustIndicators = [
+    { icon: <Users className="w-4 h-4 sm:w-5 sm:h-5" />, text: '10,000+ Healed', color: 'from-teal-500 to-teal-600' },
+    { icon: <Award className="w-4 h-4 sm:w-5 sm:h-5" />, text: '98% Success Rate', color: 'from-green-500 to-green-600' },
+    { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, text: '50+ Countries', color: 'from-blue-500 to-blue-600' },
+    { icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5" />, text: '5-Star Rated', color: 'from-pink-500 to-pink-600' }
+  ],
+  primaryCta = {
+    text: 'Discover Your Healing Team',
+    onClick: () => {
+      const featuresSection = document.getElementById('features-section');
+      if (featuresSection) {
+        featuresSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  },
+  secondaryCta = {
+    text: 'Take the Quiz to Begin',
+    href: '/quiz'
+  },
+  centralVisual = {
+    mainIcon: <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-teal-600 animate-pulse" />,
+    mainText: 'Your healing journey starts here',
+    orbitingItems: [
+      { icon: '🧘‍⚕️', label: 'Ayurveda', angle: 0 },
+      { icon: '🥗', label: 'Nutrition', angle: 72 },
+      { icon: '🧘‍♀️', label: 'Yoga', angle: 144 },
+      { icon: '🏃‍♂️', label: 'Fitness', angle: 216 },
+      { icon: '🧠', label: 'Psychology', angle: 288 }
+    ]
+  },
+  showScrollIndicator = true,
+  backgroundColors = {
+    from: 'teal-50',
+    via: 'white',
+    to: 'pink-50'
+  },
+  floatingCards = {
+    topRight: { text: '5 Expert Healers' },
+    bottomLeft: { text: 'Personalized Care' }
+  }
+}: ModernHeroSectionProps) {
   const [currentQuote, setCurrentQuote] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const heroRef = useRef<HTMLDivElement>(null);
-  
-  const quotes = [
-    "One Body. Five Paths. One Healing Journey.",
-    "Your personalized team of 5 expert healers.",
-    "Healing in harmony, not alone."
-  ];
 
   useEffect(() => {
     setIsVisible(true);
@@ -26,12 +106,11 @@ export function ModernHeroSection() {
     }, 4000);
     
     return () => clearInterval(timer);
-  }, []);
+  }, [quotes.length]);
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
     if (!heroRef.current) return;
     
-    // Throttle mouse move events with requestAnimationFrame
     window.requestAnimationFrame(() => {
       const rect = heroRef.current?.getBoundingClientRect();
       if (!rect) return;
@@ -51,17 +130,10 @@ export function ModernHeroSection() {
     }
   }, [handleMouseMove]);
 
-  const scrollToFeatures = () => {
-    const featuresSection = document.getElementById('features-section');
-    if (featuresSection) {
-      featuresSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section 
       ref={heroRef}
-      className="relative overflow-hidden bg-gradient-to-br from-teal-50 via-white to-pink-50 pt-24 pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center"
+      className={`relative overflow-hidden bg-gradient-to-br from-${backgroundColors.from} via-${backgroundColors.via} to-${backgroundColors.to} pt-24 pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center`}
     >
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -111,18 +183,13 @@ export function ModernHeroSection() {
             {/* Subtitle with proper spacing */}
             <div className="mb-10 lg:mb-12">
               <p className="text-lg sm:text-xl lg:text-2xl text-teal-700 leading-relaxed max-w-2xl">
-                Unlike anything you've seen before — ekaBrahmaa brings Ayurveda, Nutrition, Yoga, Psychology, and Functional Movement together, so you don't heal alone — you heal in harmony.
+                {subtitle}
               </p>
             </div>
 
             {/* Trust Indicators with consistent spacing */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-10 lg:mb-12">
-              {[
-                { icon: <Users className="w-4 h-4 sm:w-5 sm:h-5" />, text: '10,000+ Healed', color: 'from-teal-500 to-teal-600' },
-                { icon: <Award className="w-4 h-4 sm:w-5 sm:h-5" />, text: '98% Success Rate', color: 'from-green-500 to-green-600' },
-                { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, text: '50+ Countries', color: 'from-blue-500 to-blue-600' },
-                { icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5" />, text: '5-Star Rated', color: 'from-pink-500 to-pink-600' }
-              ].map((item, index) => (
+              {trustIndicators.map((item, index) => (
                 <div 
                   key={index}
                   className={`text-center p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-r ${item.color} text-white shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl`}
@@ -139,32 +206,34 @@ export function ModernHeroSection() {
             {/* CTA Buttons with proper spacing */}
             <div className="flex flex-col sm:flex-row gap-4 justify-start items-start mb-8 lg:mb-10">
               <Button 
-                onClick={scrollToFeatures}
+                onClick={primaryCta.onClick}
                 size="lg" 
                 className="w-full sm:w-auto bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group"
               >
                 <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-bounce" />
-                Discover Your Healing Team
+                {primaryCta.text}
               </Button>
               
-              <Link to="/quiz">
+              <Link to={secondaryCta.href}>
                 <Button 
                   variant="outline" 
                   size="lg"
                   className="w-full sm:w-auto border-2 border-teal-600 text-teal-700 hover:bg-teal-50 px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group"
                 >
                   <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-spin" />
-                  Take the Quiz to Begin
+                  {secondaryCta.text}
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
             </div>
 
             {/* Scroll Indicator */}
-            <div className="flex items-center space-x-2 text-teal-600 animate-pulse">
-              <ArrowDown className="w-4 h-4" />
-              <span className="text-sm">Scroll to explore</span>
-            </div>
+            {showScrollIndicator && (
+              <div className="flex items-center space-x-2 text-teal-600 animate-pulse">
+                <ArrowDown className="w-4 h-4" />
+                <span className="text-sm">Scroll to explore</span>
+              </div>
+            )}
           </div>
 
           {/* Interactive Visual with contained size */}
@@ -179,21 +248,15 @@ export function ModernHeroSection() {
                   <div className="text-center max-w-[80%]">
                     <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-gradient-to-r from-teal-300 to-pink-300 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center shadow-lg group-hover:animate-pulse">
                       <div className="w-18 h-18 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white rounded-full flex items-center justify-center">
-                        <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-teal-600 animate-pulse" />
+                        {centralVisual.mainIcon}
                       </div>
                     </div>
-                    <p className="text-sm sm:text-base lg:text-lg text-teal-700 font-medium leading-tight">Your healing journey starts here</p>
+                    <p className="text-sm sm:text-base lg:text-lg text-teal-700 font-medium leading-tight">{centralVisual.mainText}</p>
                   </div>
                 </div>
 
                 {/* Orbiting Elements - Contained within circle */}
-                {[
-                  { icon: '🧘‍⚕️', label: 'Ayurveda', angle: 0 },
-                  { icon: '🥗', label: 'Nutrition', angle: 72 },
-                  { icon: '🧘‍♀️', label: 'Yoga', angle: 144 },
-                  { icon: '🏃‍♂️', label: 'Fitness', angle: 216 },
-                  { icon: '🧠', label: 'Psychology', angle: 288 }
-                ].map((item, index) => (
+                {centralVisual.orbitingItems.map((item, index) => (
                   <div
                     key={index}
                     className="absolute w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-sm sm:text-base lg:text-lg animate-pulse hover:scale-125 transition-all duration-300 cursor-pointer"
@@ -210,21 +273,23 @@ export function ModernHeroSection() {
                 ))}
               </div>
 
-              {/* Floating Cards - Positioned to not overflow */}
-              <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-white p-2 sm:p-3 rounded-lg shadow-lg transform rotate-12 hover:rotate-0 transition-all duration-300 max-w-[120px] sm:max-w-none">
-                <p className="text-xs sm:text-sm text-teal-700 font-medium text-center">5 Expert Healers</p>
-              </div>
+              {/* Floating Cards */}
+              {floatingCards.topRight && (
+                <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-white p-2 sm:p-3 rounded-lg shadow-lg transform rotate-12 hover:rotate-0 transition-all duration-300 max-w-[120px] sm:max-w-none">
+                  <p className="text-xs sm:text-sm text-teal-700 font-medium text-center">{floatingCards.topRight.text}</p>
+                </div>
+              )}
               
-              <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-white p-2 sm:p-3 rounded-lg shadow-lg transform -rotate-12 hover:rotate-0 transition-all duration-300 max-w-[120px] sm:max-w-none">
-                <p className="text-xs sm:text-sm text-teal-700 font-medium text-center">Personalized Care</p>
-              </div>
+              {floatingCards.bottomLeft && (
+                <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-white p-2 sm:p-3 rounded-lg shadow-lg transform -rotate-12 hover:rotate-0 transition-all duration-300 max-w-[120px] sm:max-w-none">
+                  <p className="text-xs sm:text-sm text-teal-700 font-medium text-center">{floatingCards.bottomLeft.text}</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
-         {/* <AnimatedStats/> */}
-         <HeroSection/>
+   
       </div>
-     
     </section>
   );
 }

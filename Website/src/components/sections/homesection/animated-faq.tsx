@@ -4,59 +4,8 @@ import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
+import { faqs,categories } from '@/config/constants';
 
-const faqs = [
-  {
-    id: 1,
-    question: 'How does the 5-healer integration model work?',
-    answer: 'Our unique approach brings together an Ayurveda doctor, nutritionist, yoga therapist, functional trainer, and psychologist who collaborate on your personalized healing plan. Each healer contributes their expertise while maintaining constant communication to ensure a holistic approach to your wellness journey.',
-    category: 'General'
-  },
-  {
-    id: 2,
-    question: 'What makes ekaBrahmaa different from other wellness programs?',
-    answer: 'Unlike traditional wellness programs that focus on single aspects of health, ekaBrahmaa addresses your mind, body, and spirit simultaneously. Our team-based approach, personalized constitution analysis (Prakriti), and integration of ancient wisdom with modern practices creates a truly comprehensive healing experience.',
-    category: 'General'
-  },
-  {
-    id: 3,
-    question: 'How is my program personalized to my unique constitution?',
-    answer: 'We start with a comprehensive Prakriti (constitution) assessment that determines your unique Vata, Pitta, and Kapha balance. Based on these results, each of our 5 healers creates specific recommendations - from meal plans and exercise routines to meditation practices and herbal supplements - all tailored to your constitutional needs.',
-    category: 'Personalization'
-  },
-  {
-    id: 4,
-    question: 'What can I expect in terms of results and timeline?',
-    answer: 'Most clients begin experiencing improvements within the first week, with significant changes typically visible by day 14. However, healing is a personal journey and timelines vary. Our programs range from 7 to 45 days, allowing for different depths of transformation based on your goals and availability.',
-    category: 'Results'
-  },
-  {
-    id: 5,
-    question: 'Do I need any prior experience with Ayurveda or yoga?',
-    answer: 'Absolutely not! Our programs are designed for complete beginners as well as advanced practitioners. Your healer team will guide you step-by-step, providing clear instructions, educational materials, and constant support throughout your journey. We meet you exactly where you are.',
-    category: 'Getting Started'
-  },
-  {
-    id: 6,
-    question: 'How do I access my healers and get support?',
-    answer: 'You\'ll have multiple ways to conxnect with your team: through our mobile app for daily check-ins, scheduled video/phone consultations, emergency support chat, and access to your healer dashboard. Most programs include daily touchpoints with at least one team member.',
-    category: 'Support'
-  },
-  {
-    id: 7,
-    question: 'What if I have dietary restrictions or health conditions?',
-    answer: 'Our team specializes in working with various health conditions and dietary needs. During your initial assessment, we carefully review your medical history, current medications, allergies, and preferences to create a completely safe and effective program tailored to your specific situation.',
-    category: 'Health Concerns'
-  },
-  {
-    id: 8,
-    question: 'Is there ongoing support after my program ends?',
-    answer: 'Yes! Depending on your program, you receive 1-3 months of follow-up support. This includes maintenance guidelines, check-in consultations, access to our community platform, and the option to book additional sessions with any of your healers as needed.',
-    category: 'After Program'
-  }
-];
-
-const categories = ['All', 'General', 'Personalization', 'Results', 'Getting Started', 'Support', 'Health Concerns', 'After Program'];
 
 export function AnimatedFAQ() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);

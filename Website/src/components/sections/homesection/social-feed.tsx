@@ -4,6 +4,8 @@ import { useState, useEffect, useCallback, memo } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Instagram, Twitter, Facebook, Heart, MessageCircle, Share2, ExternalLink } from 'lucide-react';
+import { socialPosts } from '@/config/constants';
+
 
 // Optimize image URLs
 const optimizeImageUrl = (url: string, width = 400) => {
@@ -13,77 +15,6 @@ const optimizeImageUrl = (url: string, width = 400) => {
   return url;
 };
 
-const socialPosts = [
-  {
-    id: 1,
-    platform: 'instagram',
-    user: '@ekabrahmaa_official',
-    content: 'Morning meditation session with our community! ✨ Starting the day with intention and gratitude. #MorningRitual #Ayurveda',
-    image: 'https://images.pexels.com/photos/3759079/pexels-photo-3759079.jpeg?auto=compress&cs=tinysrgb&w=400',
-    likes: 1234,
-    comments: 56,
-    shares: 23,
-    timestamp: '2h ago',
-    link: 'https://instagram.com/ekabrahmaa'
-  },
-  {
-    id: 2,
-    platform: 'twitter',
-    user: '@ekaBrahmaa',
-    content: 'Quick tip for better digestion: Drink warm water with lemon and ginger first thing in the morning. Your Agni (digestive fire) will thank you! 🔥',
-    likes: 567,
-    comments: 34,
-    shares: 89,
-    timestamp: '4h ago',
-    link: 'https://twitter.com/ekabrahmaa'
-  },
-  {
-    id: 3,
-    platform: 'facebook',
-    user: 'ekaBrahmaa Healing',
-    content: 'Incredible transformation story from our community member Sarah! 💚 From chronic fatigue to boundless energy in just 21 days.',
-    image: 'https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=400',
-    likes: 892,
-    comments: 67,
-    shares: 145,
-    timestamp: '6h ago',
-    link: 'https://facebook.com/ekabrahmaa'
-  },
-  {
-    id: 4,
-    platform: 'instagram',
-    user: '@ekabrahmaa_official',
-    content: 'Today\'s Ayurvedic recipe: Golden milk turmeric latte! 🌟 Perfect for winding down and supporting immunity.',
-    image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=400',
-    likes: 734,
-    comments: 45,
-    shares: 67,
-    timestamp: '8h ago',
-    link: 'https://instagram.com/ekabrahmaa'
-  },
-  {
-    id: 5,
-    platform: 'twitter',
-    user: '@ekaBrahmaa',
-    content: 'Remember: Healing is not about quick fixes. It\'s about understanding your unique constitution and working with your body\'s natural wisdom. 🌿',
-    likes: 445,
-    comments: 28,
-    shares: 56,
-    timestamp: '10h ago',
-    link: 'https://twitter.com/ekabrahmaa'
-  },
-  {
-    id: 6,
-    platform: 'facebook',
-    user: 'ekaBrahmaa Healing',
-    content: 'Join us for our live webinar tomorrow: "Understanding Your Dosha for Better Health" - Free for all community members! 📚',
-    likes: 623,
-    comments: 89,
-    shares: 112,
-    timestamp: '12h ago',
-    link: 'https://facebook.com/ekabrahmaa'
-  }
-];
 
 // Memoize platform icon component to prevent unnecessary re-renders
 const PlatformIcon = memo(({ platform }: { platform: string }) => {
