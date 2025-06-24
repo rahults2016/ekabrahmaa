@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { appstats, features } from '@/config/constants';
 
 export function AppDownloadSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,20 +20,7 @@ export function AppDownloadSection() {
     setIsVisible(true);
   }, []);
 
-  const features = [
-    'Real-time healer support',
-    'Personalized meal plans',
-    'Guided meditations',
-    'Progress tracking',
-    'Yoga & exercise videos',
-    'Offline content access'
-  ];
-
-  const stats = [
-    { number: '50,000+', label: 'App Downloads' },
-    { number: '4.8★', label: 'App Store Rating' },
-    { number: '24/7', label: 'Healer Support' }
-  ];
+  
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 text-white relative overflow-hidden mt-16 lg:mt-20">
@@ -142,7 +130,7 @@ export function AppDownloadSection() {
 
         {/* Stats */}
         <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
-          {stats.map((stat, index) => (
+          {appstats.map((stat, index) => (
             <div 
               key={index}
               className={`transform transition-all duration-1000 hover:scale-110 ${

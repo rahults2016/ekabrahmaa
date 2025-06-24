@@ -2,74 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Users, Award, Globe, Heart, Star, TrendingUp, Shield, Clock } from 'lucide-react';
-
-const stats = [
-  {
-    icon: <Users className="w-8 h-8" />,
-    number: 10000,
-    suffix: '+',
-    label: 'People Healed',
-    description: 'Transformed lives across the globe',
-    color: 'from-teal-500 to-teal-600'
-  },
-  {
-    icon: <Award className="w-8 h-8" />,
-    number: 98,
-    suffix: '%',
-    label: 'Success Rate',
-    description: 'Proven healing outcomes',
-    color: 'from-green-500 to-green-600'
-  },
-  {
-    icon: <Globe className="w-8 h-8" />,
-    number: 50,
-    suffix: '+',
-    label: 'Countries',
-    description: 'Global healing community',
-    color: 'from-blue-500 to-blue-600'
-  },
-  {
-    icon: <Star className="w-8 h-8" />,
-    number: 4.9,
-    suffix: '/5',
-    label: 'Rating',
-    description: 'Outstanding client satisfaction',
-    color: 'from-yellow-500 to-yellow-600'
-  },
-  {
-    icon: <TrendingUp className="w-8 h-8" />,
-    number: 87,
-    suffix: '%',
-    label: 'Improvement',
-    description: 'Average health improvement',
-    color: 'from-purple-500 to-purple-600'
-  },
-  {
-    icon: <Shield className="w-8 h-8" />,
-    number: 100,
-    suffix: '%',
-    label: 'Natural',
-    description: 'Chemical-free healing',
-    color: 'from-emerald-500 to-emerald-600'
-  },
-  {
-    icon: <Heart className="w-8 h-8" />,
-    number: 24,
-    suffix: '/7',
-    label: 'Support',
-    description: 'Round-the-clock care',
-    color: 'from-pink-500 to-pink-600'
-  },
-  {
-    icon: <Clock className="w-8 h-8" />,
-    number: 14,
-    suffix: ' days',
-    label: 'Average',
-    description: 'Time to see results',
-    color: 'from-indigo-500 to-indigo-600'
-  }
-];
+import { stats } from '@/config/constants';
 
 export function AnimatedStats() {
   const [isVisible, setIsVisible] = useState(false);

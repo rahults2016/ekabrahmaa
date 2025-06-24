@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Star, Heart, MessageCircle, Share2, Play, Instagram, Twitter, Facebook } from 'lucide-react';
+import { ugcPosts } from '@/config/constants';
 
 // Lazy load images by adding loading="lazy" attribute
 const optimizeImageUrl = (url: string, width = 400) => {
@@ -15,111 +16,7 @@ const optimizeImageUrl = (url: string, width = 400) => {
   return url;
 };
 
-const ugcPosts = [
-  {
-    id: 1,
-    type: 'review',
-    user: {
-      name: 'Sarah Johnson',
-      avatar: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100',
-      verified: true
-    },
-    content: 'Amazing transformation in just 2 weeks! My energy levels are through the roof and my skin is glowing. Thank you ekaBrahmaa! 🙏',
-    rating: 5,
-    image: 'https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg',
-    program: 'ekaSanskara',
-    likes: 234,
-    comments: 18,
-    shares: 45,
-    platform: 'instagram'
-  },
-  {
-    id: 2,
-    type: 'before-after',
-    user: {
-      name: 'Mike Chen',
-      avatar: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100',
-      verified: true
-    },
-    content: 'Lost 15kg and gained so much confidence! The personalized approach really works.',
-    rating: 5,
-    image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg',
-    program: 'ekaUdaya',
-    likes: 456,
-    comments: 32,
-    shares: 67,
-    platform: 'facebook'
-  },
-  {
-    id: 3,
-    type: 'video',
-    user: {
-      name: 'Priya Sharma',
-      avatar: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=100',
-      verified: true
-    },
-    content: 'My daily morning routine has completely changed my life. Watch my journey!',
-    rating: 5,
-    image: 'https://images.pexels.com/photos/3759079/pexels-photo-3759079.jpeg',
-    program: 'ekaPavana',
-    likes: 789,
-    comments: 56,
-    shares: 123,
-    platform: 'instagram',
-    isVideo: true
-  },
-  {
-    id: 4,
-    type: 'review',
-    user: {
-      name: 'Emma Wilson',
-      avatar: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=100',
-      verified: true
-    },
-    content: 'The personalized meal plans were a game changer. I never felt restricted, just nourished! 🌱',
-    rating: 5,
-    image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg',
-    program: 'ekaSamanvaya',
-    likes: 345,
-    comments: 24,
-    shares: 38,
-    platform: 'twitter'
-  },
-  {
-    id: 5,
-    type: 'milestone',
-    user: {
-      name: 'David Lee',
-      avatar: 'https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=100',
-      verified: true
-    },
-    content: '100 days smoke-free thanks to the holistic approach! Mind, body, and spirit aligned.',
-    rating: 5,
-    image: 'https://images.pexels.com/photos/3621344/pexels-photo-3621344.jpeg',
-    program: 'ekaPrabodha',
-    likes: 567,
-    comments: 78,
-    shares: 89,
-    platform: 'instagram'
-  },
-  {
-    id: 6,
-    type: 'transformation',
-    user: {
-      name: 'Lisa Rodriguez',
-      avatar: 'https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&w=100',
-      verified: true
-    },
-    content: 'From chronic fatigue to feeling energized every day. This program saved my life! 💚',
-    rating: 5,
-    image: 'https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg',
-    program: 'ekaUdaya',
-    likes: 892,
-    comments: 134,
-    shares: 156,
-    platform: 'facebook'
-  }
-];
+
 
 export function UGCGallery() {
   const [filter, setFilter] = useState('all');
