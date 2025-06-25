@@ -30,7 +30,7 @@ export const NewsletterSignup = lazy(() => import('@/components/sections/homesec
 export const  AppDownloadSection   = lazy(() => import('@/components/sections/homesection/app-download').then(mod => ({ default: mod.AppDownloadSection })));
 
 export const WhatWeHealPageSection = lazy(() =>
-  import('@/components/sections/whatwehealsection/whatweheal').then(module => ({
+  import('@/pages/what-we-heal/index').then(module => ({
     default: module.default
   }))
 );
@@ -38,6 +38,12 @@ export const WhatWeHealPageSection = lazy(() =>
 
 export const ProgramPageSection = lazy(() =>
   import('@/components/sections//programs/programs').then(module => ({
+    default: module.default
+  }))
+);
+
+export const QuizPage2 = lazy(() =>
+  import('@/pages/Quiz/QuizPage').then(module => ({
     default: module.default
   }))
 );

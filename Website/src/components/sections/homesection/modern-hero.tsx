@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, ArrowRight, ArrowDown, Heart, Users, Globe, Award } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 interface ModernHeroSectionProps {
@@ -60,12 +60,8 @@ export function ModernHeroSection({
   ],
   primaryCta = {
     text: 'Discover Your Healing Team',
-    onClick: () => {
-      const featuresSection = document.getElementById('features-section');
-      if (featuresSection) {
-        featuresSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+    
+    
   },
   secondaryCta = {
     text: 'Take the Quiz to Begin',
@@ -93,6 +89,13 @@ export function ModernHeroSection({
     bottomLeft: { text: 'Personalized Care' }
   }
 }: ModernHeroSectionProps) {
+  const navigate = useNavigate();
+  
+  primaryCta = {
+    ...primaryCta,
+    onClick: () => navigate('/#features')
+  };
+
   const [currentQuote, setCurrentQuote] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
