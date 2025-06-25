@@ -47,10 +47,3 @@ export const QuizPage2 = lazy(() =>
     default: module.default
   }))
 );
-
-
-export const QuizPage = lazy(() =>
-  import('@/components/sections/quiz/quiz').then(module => ({
-    default: module.default
-  }))
-);
