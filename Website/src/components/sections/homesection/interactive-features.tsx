@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Clock, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Memoize expensive operations
 const calculateProgressIncrement = (currentProgress: number) => {
@@ -165,13 +166,14 @@ export function InteractiveFeatures({ programs }: InteractiveFeaturesProps) {
                       </div>
                     ))}
                   </div>
-
-                  <Button 
-                    className={`w-full bg-gradient-to-r ${programs[activeProgram].color} text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
-                  >
-                    Start {programs[activeProgram].title}
+                  <Link to={`/programs/${programs[activeProgram].id}`}>
+                    <Button 
+                      className={`w-full bg-gradient-to-r ${programs[activeProgram].color} text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
+                    >
+                      Start {programs[activeProgram].title}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
+                </Link>
                 </div>
               </div>
             </Card>
