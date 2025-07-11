@@ -533,13 +533,7 @@ const Programs: React.FC = () => {
       [activityName]: !prev[activityName]
     }));
   };
-  
-  const handleMedicationTaken = (medicationName: string) => {
-    setMedicationStatus(prev => ({
-      ...prev,
-      [medicationName]: !prev[medicationName]
-    }));
-  };
+
 
   const handleInternalMedicineTaken = (medicineId: string) => {
     setInternalMedicineStatus(prev => ({
