@@ -2,8 +2,8 @@
 import { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useRoutesConfig } from '@/router/routesConfig';
-import { Loading } from '@/common/Loading';
-import MainLayout from '@/components/layouts/MainLayout';
+import { Loading } from '@/components/dashboard/common/Loading';
+import MainLayout from '@/components/dashboard/layouts/MainLayout';
 
 const App = () => {
   const { structuredRoutes, standaloneRoutes } = useRoutesConfig();
@@ -12,7 +12,6 @@ const App = () => {
     <Router>
       <Suspense fallback={<Loading />}>
         <Routes>
-          {/* Structured routes with MainLayout */}
           <Route element={<MainLayout />}>
             {structuredRoutes.map((route) => (
               <Route
@@ -23,7 +22,6 @@ const App = () => {
             ))}
           </Route>
 
-          {/* Standalone routes with MainLayout */}
           <Route element={<MainLayout />}>
             {standaloneRoutes.map((route) => (
               <Route

@@ -1,0 +1,280 @@
+/* Professional Theme Styles - Gabit.com Inspired */
+
+:root {
+  /* Professional Color Palette */
+  --color-primary: #007AFF;
+  --color-primary-hover: #0056CC;
+  --color-text: #1D1D1F;
+  --color-text-secondary: #6E6E73;
+  --color-border: #D2D2D7;
+  --color-background: #FFFFFF;
+  --color-background-secondary: #F8F9FA;
+  
+  /* Typography */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-serif: 'Georgia', 'Times New Roman', serif;
+  
+  /* Spacing */
+  --header-height-desktop: 72px;
+  --header-height-mobile: 56px;
+  --container-max-width: 1200px;
+  --container-padding: 24px;
+  
+  /* Shadows */
+  --shadow-header: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-dropdown: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.3s ease-in-out;
+}
+
+/* Professional Typography */
+.professional-text {
+  font-family: var(--font-family-primary);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.professional-text-secondary {
+  color: var(--color-text-secondary);
+}
+
+/* Professional Buttons */
+.professional-button {
+  font-family: var(--font-family-primary);
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.professional-button-primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px 24px;
+  font-size: 14px;
+}
+
+.professional-button-primary:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.professional-button-secondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: 11px 23px;
+  font-size: 14px;
+}
+
+.professional-button-secondary:hover {
+  background-color: var(--color-background-secondary);
+  border-color: var(--color-text-secondary);
+}
+
+/* Professional Navigation */
+.professional-nav-item {
+  font-family: var(--font-family-primary);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.professional-nav-item:hover {
+  opacity: 0.7;
+}
+
+.professional-nav-item.active {
+  font-weight: 600;
+}
+
+/* Professional Dropdown */
+.professional-dropdown {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-dropdown);
+  padding: 8px 0;
+  min-width: 200px;
+}
+
+.professional-dropdown-item {
+  display: block;
+  padding: 8px 16px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color var(--transition-fast);
+}
+
+.professional-dropdown-item:hover {
+  background-color: var(--color-background-secondary);
+}
+
+/* Professional Container */
+.professional-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Professional Header */
+.professional-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  transition: box-shadow var(--transition-fast);
+}
+
+.professional-header.scrolled {
+  box-shadow: var(--shadow-header);
+}
+
+.professional-header-content {
+  height: var(--header-height-desktop);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Professional Footer */
+.professional-footer {
+  background-color: var(--color-background-secondary);
+  border-top: 1px solid var(--color-border);
+}
+
+.professional-footer-content {
+  padding: 64px var(--container-padding);
+}
+
+.professional-footer-section {
+  margin-bottom: 32px;
+}
+
+.professional-footer-title {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.professional-footer-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: color var(--transition-fast);
+}
+
+.professional-footer-link:hover {
+  color: var(--color-text);
+}
+
+/* Professional Form Elements */
+.professional-input {
+  font-family: var(--font-family-primary);
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: white;
+  color: var(--color-text);
+  font-size: 14px;
+  transition: border-color var(--transition-fast);
+  width: 100%;
+}
+
+.professional-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 20px;
+  }
+  
+  .professional-header-content {
+    height: var(--header-height-mobile);
+  }
+  
+  .professional-footer-content {
+    padding: 48px var(--container-padding);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 16px;
+  }
+  
+  .professional-footer-content {
+    padding: 32px var(--container-padding);
+  }
+  
+  .professional-footer-section {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .professional-header-content {
+    height: var(--header-height-mobile);
+  }
+  
+  .professional-button-primary,
+  .professional-button-secondary {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for accessibility */
+.professional-button:focus,
+.professional-nav-item:focus,
+.professional-input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-border: #000000;
+    --color-text-secondary: #000000;
+  }
+}

@@ -2,57 +2,57 @@
 import { withLoading } from "@/hoc/withLoading";
 import React from "react";
 import type { AppRoute } from "./types";
-import Journal from "@/features/dashboard/components/journal";
+import Journal from "@/features/dashboard/Home/components/journal";
 
 const Dashboard = withLoading(
-  React.lazy(() => import("@/pages/dashboard"))
+  React.lazy(() => import("@/pages/dashboard/Home"))
 );
 
 const MorningSmile = withLoading(
-  React.lazy(() => import("@/features/dashboard/components/MorningSmile"))
+  React.lazy(() => import("@/features/dashboard/Home/components/MorningSmile"))
 );
 const Chat = withLoading(
-  React.lazy(() => import("@/features/dashboard/components/chat"))
+  React.lazy(() => import("@/features/dashboard/Home/components/chat"))
 );
 const Programs = withLoading(
-  React.lazy(() => import("@/pages/programs"))
+  React.lazy(() => import("@/pages/dashboard/programs"))
 );
 const MedicalHistory = withLoading(
-  React.lazy(() => import("@/pages/medical"))
+  React.lazy(() => import("@/pages/dashboard/medical"))
 );
 const MedicalHistoryView = withLoading(
-  React.lazy(() => import("@/features/medical/MedicalHistoryView"))
+  React.lazy(() => import("@/features/dashboard/medical/MedicalHistoryView"))
 );
 const MedicalHistoryForm = withLoading(
-  React.lazy(() => import("@/features/medical/MedicalHistoryForm"))
+  React.lazy(() => import("@/features/dashboard/medical/MedicalHistoryForm"))
 );
 const Appointments = withLoading(
-  React.lazy(() => import("@/pages/Appointment"))
+  React.lazy(() => import("@/pages/dashboard/Appointment"))
 );
 const TalkToHealer = withLoading(
-  React.lazy(() => import("@/pages/talktohealer"))
+  React.lazy(() => import("@/pages/dashboard/talktohealer"))
 );
 const ChatPage = withLoading(
-  React.lazy(() => import("@/pages/chat"))
+  React.lazy(() => import("@/pages/dashboard/chat"))
 );
 const Cart = withLoading(
-  React.lazy(() => import("@/pages/cart"))
+  React.lazy(() => import("@/pages/dashboard/cart"))
 );
 const Invoices = withLoading(
-  React.lazy(() => import("@/pages/payments/invoices"))
+  React.lazy(() => import("@/pages/dashboard/payments/invoices"))
 );
 const PaymentHistory = withLoading(
-  React.lazy(() => import("@/pages/payments/history/paymentHistory"))
+  React.lazy(() => import("@/pages/dashboard/payments/history/paymentHistory"))
 );
 
 const ResourcesExplore = withLoading(
-  React.lazy(() => import("@/pages/Resoure/explore"))
+  React.lazy(() => import("@/pages/dashboard/Resoure/explore"))
 );
 const ResourcesBookmarks = withLoading(
-  React.lazy(() => import("@/pages/Resoure/bookmarks"))
+  React.lazy(() => import("@/pages/dashboard/Resoure/bookmarks"))
 );
 const Settings = withLoading(
-  React.lazy(() => import("@/pages/settings"))
+  React.lazy(() => import("@/pages/dashboard/settings"))
 );
 
 export const useRoutesConfig = () => {

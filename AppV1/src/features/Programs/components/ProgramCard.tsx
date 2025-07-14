@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Lock } from 'lucide-react';
-import ProgressRing from '@/common/ProgressRing';
+import ProgressRing from '@/components/dashboard/common/ProgressRing';
 import type { Program } from '../types';
 
 interface ProgramCardProps {

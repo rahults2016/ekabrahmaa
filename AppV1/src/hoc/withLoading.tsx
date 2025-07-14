@@ -1,5 +1,5 @@
 
-import { Loading } from "@/common/Loading";
+import { Loading } from "@/components/dashboard/common/Loading";
 import React from "react";
 
 export const withLoading = <P extends object>(
