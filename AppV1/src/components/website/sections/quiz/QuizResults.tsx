@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { Card, CardHeader, CardTitle, CardContent } from '@/website/ui/card';
-import { Button } from '@/website/ui/button';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/website/ui/card';
+import { Button } from '@/components/website/ui/button';
 import { ArrowRight, Droplets, Moon, Sun } from 'lucide-react';
 import { LoadingLink } from '../../loadingLink';
-import { getDoshaInfo } from '@/data/quizConstants';
+import { getDoshaInfo } from '@/data/website/quizConstants';
 
 interface QuizResultsProps {
   results: { vata: number; pitta: number; kapha: number };

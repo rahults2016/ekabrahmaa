@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Button } from '@/website/ui/button';
-import { Card, CardContent } from '@/website/ui/card';
-import { Badge } from '@/website/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/website/ui/tabs';
+import { Button } from '@/components/website/ui/button';
+import { Card, CardContent } from '@/components/website/ui/card';
+import { Badge } from '@/components/website/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/website/ui/tabs';
 import { Clock, Users, ArrowRight, CheckCircle, Leaf } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { programs } from '@/data/programConst';
+import { programs } from '@/data/website/programConst';
 
 
 

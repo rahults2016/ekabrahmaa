@@ -1,5 +1,5 @@
-import { Card, CardContent } from '@/website/ui/card';
-import { Badge } from '@/website/ui/badge';
+import { Card, CardContent } from '@/components/website/ui/card';
+import { Badge } from '@/components/website/ui/badge';
 import { 
   Clock, 
   AlertCircle, 

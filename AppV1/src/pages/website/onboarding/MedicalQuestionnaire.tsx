@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/website/ui/card';
-import { Button } from '@/website/ui/button';
-import { Input } from '@/website/ui/input';
-import { Label } from '@/website/ui/label';
-import { RadioGroup, RadioGroupItem } from '@/website/ui/radio-group';
-import { Separator } from '@/website/ui/separator';
-import { Badge } from '@/website/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Separator } from '@/components/ui/separator';
+import { Badge } from '@/components/ui/badge';
 import { 
   Calendar, 
   FileText,

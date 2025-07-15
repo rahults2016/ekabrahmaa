@@ -1,8 +1,7 @@
 'use client';
 
-import { Card, CardContent } from '@/website/ui/card';
-import { Button } from '@/website/ui/button';
-import { MessageCircle, Sparkles, Target } from 'lucide-react';
+import { Card, CardContent } from '@/components/website/ui/card';  
+import { Button } from '@/components/website/ui/button';
 import { Link } from 'react-router-dom';
 
 export const GettingStarted = () => {
@@ -25,6 +24,7 @@ export const GettingStarted = () => {
               <p className="text-teal-700 text-xs lg:text-sm mb-4">Discover your constitution and get personalized recommendations</p>
               <Link to="/quiz">
                 <Button 
+                 
                   className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white rounded-full text-sm transform transition-all duration-300 hover:scale-105 active:scale-95 focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50"
                   aria-label="Start the dosha quiz"
                   onClick={() => {
@@ -52,6 +52,7 @@ export const GettingStarted = () => {
               <p className="text-teal-700 text-xs lg:text-sm mb-4">Speak with our Ayurveda doctor about your specific concerns</p>
               <Link to="/consultation">
                 <Button 
+                  
                   className="bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 text-white rounded-full text-sm transform transition-all duration-300 hover:scale-105 active:scale-95 focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50"
                   aria-label="Book a free consultation"
                   onClick={() => {
@@ -79,6 +80,7 @@ export const GettingStarted = () => {
               <p className="text-teal-700 text-xs lg:text-sm mb-4">Explore our healing programs designed for different needs</p>
               <Link to="/programs">
                 <Button 
+                  
                   className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-full text-sm transform transition-all duration-300 hover:scale-105 active:scale-95 focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
                   aria-label="View all healing programs"
                   onClick={() => {
@@ -106,7 +108,7 @@ export const GettingStarted = () => {
             Still have questions? Our support team is here to help.
           </p>
           <Link to="/consultation">
-            <Button variant="outline" size="lg" className="border-2 border-teal-600 text-teal-700 hover:bg-teal-50 px-6 lg:px-8 py-2 lg:py-3 rounded-full text-sm lg:text-base">
+            <Button 
               variant="outline" 
               size="lg" 
               className="border-2 border-teal-600 text-teal-700 hover:bg-teal-50 px-6 lg:px-8 py-2 lg:py-3 rounded-full text-sm lg:text-base transform transition-all duration-300 hover:scale-105 active:scale-95 focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50"
@@ -123,6 +125,8 @@ export const GettingStarted = () => {
                   console.error('Analytics error:', error);
                 }
               }}
+            >
+              Chat with our support team
             </Button>
           </Link>
         </div>

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Upload, Download, Eye, Plus, User } from 'lucide-react';
 import { Link, Routes, Route, useNavigate } from 'react-router-dom';
-import MedicalHistoryForm from '@/features/medical/MedicalHistoryForm';
-import MedicalHistoryView from '@/features/medical/MedicalHistoryView';
+import MedicalHistoryForm from '@/features/dashboard/medical/MedicalHistoryForm';
+import MedicalHistoryView from '@/features/dashboard/medical/MedicalHistoryView';
+
 
 
 interface MedicalRecord {

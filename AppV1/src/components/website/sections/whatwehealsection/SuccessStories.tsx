@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { Card, CardHeader, CardContent } from '@/website/ui/card';
-import { Badge } from '@/website/ui/badge';
-import { Button } from '@/website/ui/button';
+import { Card, CardHeader, CardContent } from '@/components/website/ui/card';
+import { Badge } from '@/components/website/ui/badge';
+import { Button } from '@/components/website/ui/button';
 import { CheckCircle, Star, Play } from 'lucide-react';
-import { successStories } from '@/data/whatWehealConst';
+import { successStories } from '@/data/website/whatWehealConst';
 
 
 export const SuccessStories = () => {

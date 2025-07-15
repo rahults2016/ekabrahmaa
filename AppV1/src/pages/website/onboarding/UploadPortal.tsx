@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/website/ui/card';
-import { Button } from '@/website/ui/button';
-import { Progress } from '@/website/ui/progress';
-import { Badge } from '@/website/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
+import { Badge } from '@/components/ui/badge';
 import { 
   Upload, 
   FileText, 

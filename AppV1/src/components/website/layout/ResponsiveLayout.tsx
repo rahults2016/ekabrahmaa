@@ -2,7 +2,8 @@ import { Outlet } from 'react-router-dom';
 import { ResponsiveNavigation } from './ResponsiveNavigation';
 import { UniversalFooter } from './UniversalFooter';
 import { Calendar, Leaf, Sparkles } from 'lucide-react';
-import { HomeNavButton } from '@/website/HomeNavButtons';
+import { HomeNavButton } from '../HomeNavButtons';
+// import { HomeNavButton } from '@/components/website/layout/HomeNavButtons';
 
 // Main navigation items
 const navigationItems = [

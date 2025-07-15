@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Button } from '@/website/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/website/ui/sheet';
+import { Button } from '@/components/website/ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/website/ui/sheet';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Menu, 
@@ -10,7 +10,7 @@ import {
   ChevronDown,
   ChevronRight
 } from 'lucide-react';
-import { LoadingLink } from '@/website/loadingLink';
+import { LoadingLink } from '@/components/website/loadingLink';
 
 interface NavItem {
   title: string;

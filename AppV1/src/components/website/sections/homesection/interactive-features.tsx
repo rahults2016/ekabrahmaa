@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/website/ui/card';
-import { Button } from '@/website/ui/button';
-import { Badge } from '@/website/ui/badge';
-import { Progress } from '@/website/ui/progress';
+import { Card, CardContent } from '@/components/website/ui/card';
+import { Button } from '@/components/website/ui/button';
+import { Badge } from '@/components/website/ui/badge';
+import { Progress } from '@/components/website/ui/progress';
 import { Clock, Users, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { HomeNavButton } from '@/website/HomeNavButtons';
+import { HomeNavButton } from '@/components/website/HomeNavButtons';
 
 // Memoize expensive operations
 const calculateProgressIncrement = (currentProgress: number) => {

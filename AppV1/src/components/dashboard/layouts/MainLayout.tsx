@@ -15,7 +15,7 @@ const MainLayout: React.FC = () => {
   const getPageTitle = () => {
     const path = location.pathname;
     switch (path) {
-      case '/':
+      case '/app':
         return 'Dashboard';
       case '/programs':
         return 'My Programs';

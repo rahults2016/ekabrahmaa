@@ -1,14 +1,14 @@
 // src/pages/QuizPage.tsx
 'use client';
 
+import { QuizHeader } from '@/components/website/sections/quiz/Quizheader';
+import { QuizProgress } from '@/components/website/sections/quiz/QuizProgress';
+import { QuizQuestionCard } from '@/components/website/sections/quiz/QuizQuestionCard';
+import { QuizResults } from '@/components/website/sections/quiz/QuizResults';
+import { QuizTrendIndicator } from '@/components/website/sections/quiz/QuizTrendIndicator';
+import { RegistrationForm } from '@/components/website/sections/quiz/RegistrationForm';
+import { questions } from '@/data/website/quizConstants';
 import { useState, useEffect, useRef } from 'react';
-import { questions } from '@/config/quizConstants';
-import { QuizProgress } from '@/website/sections/quiz/QuizProgress';
-import { QuizQuestionCard } from '@/website/sections/quiz/QuizQuestionCard';
-import { QuizResults } from '@/website/sections/quiz/QuizResults';
-import { QuizTrendIndicator } from '@/website/sections/quiz/QuizTrendIndicator';
-import { QuizHeader } from '@/website/sections/quiz/Quizheader';
-import { RegistrationForm } from '@/website/sections/quiz/RegistrationForm';
 
 export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);

@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent } from '@/website/ui/card';
-import { Badge } from '@/website/ui/badge';
-import { Button } from '@/website/ui/button';
+import { Card, CardContent } from '@/components/website/ui/card';
+import { Badge } from '@/components/website/ui/badge';
+import { Button } from '@/components/website/ui/button';
 import { Star, Play, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 // Optimize image URLs

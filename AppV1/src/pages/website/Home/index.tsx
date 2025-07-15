@@ -1,20 +1,28 @@
 // src/pages/Home/index.jsx
 import { Suspense, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import { Skeleton } from "@/website/ui/skeleton";
-import { HomepageNavButtons } from "@/website/HomeNavButtons";
-import { 
-  AnimatedFAQ, 
-  AnimatedStats, 
-  AppDownloadSection, 
-  ModernHeroSection, 
-  NewsletterSignup, 
-  ParallaxSection, 
-  SocialFeed, 
-  UGCGallery 
-} from "@/config/routeConfig";
+import { Skeleton } from "@/components/ui/skeleton";
+// import { 
+//   AnimatedFAQ, 
+//   AnimatedStats, 
+//   AppDownloadSection, 
+//   ModernHeroSection, 
+//   NewsletterSignup, 
+//   ParallaxSection, 
+//   SocialFeed, 
+//   UGCGallery 
+// } from "@/config/routeConfig";
 import InteractiveFeaturesWrapper from "./InteractiveFeaturesWrapper";
 import AnimatedTestimonialsWrapper from "./animatedTestimonialsWrapper";
+import { ModernHeroSection } from "@/components/website/sections/homesection/modern-hero";
+import { HomepageNavButtons } from "@/components/website/HomeNavButtons";
+import { AnimatedStats } from "@/components/website/sections/homesection/animated-stats";
+import { ParallaxSection } from "@/components/website/sections/homesection/ParallaxSection";
+import { UGCGallery } from "@/components/website/sections/homesection/ugc-gallery";
+import { SocialFeed } from "@/components/website/sections/homesection/social-feed";
+import { AnimatedFAQ } from "@/components/website/sections/homesection/animated-faq";
+import { NewsletterSignup } from "@/components/website/sections/homesection/newsletter-signup";
+import { AppDownloadSection } from "@/components/website/sections/homesection/app-download";
 
 export function Homepage() {
   const location = useLocation();
@@ -159,3 +167,4 @@ export function Homepage() {
     </div>
   );
 }
+export default Homepage;

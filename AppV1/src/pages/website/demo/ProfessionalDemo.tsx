@@ -1,5 +1,5 @@
-import { Button } from '@/website/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/website/ui/card';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, Star, Users, Award } from 'lucide-react';
 
 export default function ProfessionalDemo() {

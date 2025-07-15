@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { doshaIcons } from '@/data/quizConstants';
+import { doshaIcons } from '@/data/website/quizConstants';
 
 interface QuizTrendIndicatorProps {
   currentTrend: 'vata' | 'pitta' | 'kapha' | null;

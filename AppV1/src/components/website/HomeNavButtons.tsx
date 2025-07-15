@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { LoadingLink } from '@/website/loadingLink';
 import { Sparkles, Calendar, ArrowRight, ExternalLink } from 'lucide-react';
+import { LoadingLink } from './loadingLink';
 
 interface HomeNavButtonProps {
   primary?: boolean;

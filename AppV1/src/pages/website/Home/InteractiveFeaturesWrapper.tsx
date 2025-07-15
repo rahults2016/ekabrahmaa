@@ -1,4 +1,4 @@
-import { InteractiveFeatures } from "@/config/routeConfig";
+import { InteractiveFeatures } from "@/components/website/sections/homesection/interactive-features";
 import { Droplets, Moon, Sun } from "lucide-react";
 
   const programs = [

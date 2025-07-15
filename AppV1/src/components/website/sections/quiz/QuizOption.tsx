@@ -1,6 +1,6 @@
 // src/components/quiz/QuizOption.tsx
 import { motion } from 'framer-motion';
-import { Label } from '@/website/ui/label';
+import { Label } from '@/components/website/ui/label';
 import { CheckCircle } from 'lucide-react';
 
 interface QuizOptionProps {

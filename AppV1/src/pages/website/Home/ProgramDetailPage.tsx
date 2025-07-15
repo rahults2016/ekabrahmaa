@@ -1,8 +1,8 @@
 // src/pages/ProgramDetailPage.jsx
 import { Leaf } from 'lucide-react';
-import { Button } from '@/website/ui/button';
+import { Button } from '@/components/ui/button';
 import { Link, useParams } from 'react-router-dom';
-import ProgramDetailClient from '@/website/sections/programs/[id]/program-detail-client';
+import ProgramDetailClient from '@/components/website/sections/programs/[id]/program-detail-client';
 import { useEffect } from 'react';
 
 export default function ProgramDetailPage() {

@@ -7,11 +7,11 @@ declare global {
 }
 
 import { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/website/ui/card';
-import { Button } from '@/website/ui/button';
-import { HomeNavButton } from '@/website/HomeNavButtons';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/website/ui/card';
+import { Button } from '@/components/website/ui/button';
+import { HomeNavButton } from '@/components/website/HomeNavButtons';
 import { ChevronDown, MessageCircle, Phone, Mail } from 'lucide-react';
-import { faqs,categories } from '@/data/constants';
+import { faqs,categories } from '@/data/website/constants';
 
 
 export function AnimatedFAQ() {

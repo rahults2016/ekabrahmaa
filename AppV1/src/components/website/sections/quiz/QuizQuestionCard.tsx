@@ -1,6 +1,6 @@
 // src/components/quiz/QuizQuestionCard.tsx
 import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardHeader, CardTitle, CardContent } from '@/website/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/website/ui/card';
 import { QuizOption } from './QuizOption';
 import { QuizControls } from './QuizControls';
 

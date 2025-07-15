@@ -1,6 +1,6 @@
 // src/components/quiz/QuizProgress.tsx
-import { Progress } from '@/website/ui/progress';
-import { categoryIcons } from '@/data/quizConstants';
+import { Progress } from '@/components/website/ui/progress';
+import { categoryIcons } from '@/data/website/quizConstants';
 import { motion } from 'framer-motion';
 
 interface QuizProgressProps {

@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Card, CardContent } from '@/website/ui/card';
-import { stats } from '@/data/constants';
+import { Card, CardContent } from '@/components/website/ui/card';
+import { stats } from '@/data/website/constants';
 
 export function AnimatedStats() {
   const [isVisible, setIsVisible] = useState(false);

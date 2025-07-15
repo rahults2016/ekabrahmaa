@@ -1,4 +1,4 @@
-// src/components/sections/app-download.tsx
+  // src/components/sections/app-download.tsx
 import { useState, useEffect } from 'react';
 import { 
   CheckCircle, 
@@ -8,9 +8,9 @@ import {
   Download, 
   Sparkles 
 } from 'lucide-react';
-import { Button } from '@/website/ui/button';
-import { Card } from '@/website/ui/card';
-import { appstats, features } from '@/data/constants';
+import { Button } from '@/components/website/ui/button';
+import { Card } from '@/components/website/ui/card';
+import { appstats, features } from '@/data/website/constants';
 
 export function AppDownloadSection() {
   const [isVisible, setIsVisible] = useState(false);

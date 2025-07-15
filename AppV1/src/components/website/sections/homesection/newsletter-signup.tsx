@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/website/ui/card';
-import { Button } from '@/website/ui/button';
-import { Input } from '@/website/ui/input';
-import { HomeNavButton } from '@/website/HomeNavButtons';
+import { Card, CardContent } from '@/components/website/ui/card';
+import { Button } from '@/components/website/ui/button';
+import { Input } from '@/components/website/ui/input';
+import { HomeNavButton } from '@/components/website/HomeNavButtons';
 import { Mail, Sparkles, CheckCircle, ArrowRight, Gift, Calendar, Users } from 'lucide-react';
 
 export function NewsletterSignup() {

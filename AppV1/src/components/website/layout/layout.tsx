@@ -1,7 +1,7 @@
 // src/components/layout/layout.tsx
 import { Outlet } from 'react-router-dom';
-import { Header } from '@/website/layout/Header';
-import { UniversalFooter } from '@/website/layout/UniversalFooter';
+import { Header } from '@/components/website/layout/Header';
+import { UniversalFooter } from '@/components/website/layout/UniversalFooter';
 
 export function Layout() {
   return (

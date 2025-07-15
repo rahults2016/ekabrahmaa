@@ -1,4 +1,4 @@
-import { AnimatedTestimonials } from '@/config/routeConfig'
+import { AnimatedTestimonials } from "@/components/website/sections/homesection/animated-testimonials";
 
  const testimonials = [
     {

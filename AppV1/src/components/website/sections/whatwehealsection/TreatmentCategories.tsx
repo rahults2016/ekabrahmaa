@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Card } from '@/website/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/website/ui/tabs';
-import { Button } from '@/website/ui/button';
+import { Card } from '@/components/website/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/website/ui/tabs';
+import { Button } from '@/components/website/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import { healthConditions } from '@/data/whatWehealConst';
+import { healthConditions } from '@/data/website/whatWehealConst';
 
 
 export const TreatmentCategories = () => {

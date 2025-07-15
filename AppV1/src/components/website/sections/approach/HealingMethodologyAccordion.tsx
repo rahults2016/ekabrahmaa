@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Card } from '@/website/ui/card';
-import { Button } from '@/website/ui/button';
+import { Card } from '@/components/website/ui/card';
+import { Button } from '@/components/website/ui/button';
 import { ChevronDown, ChevronUp, CheckCircle } from 'lucide-react';
 
 // Healing methodology steps with detailed information

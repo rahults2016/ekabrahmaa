@@ -1,6 +1,6 @@
 import { Leaf } from 'lucide-react';
 
-import { Button } from '@/website/ui/button';
+import { Button } from '@/components/website/ui/button';
 import { Link } from 'react-router-dom';
 import ProgramDetailClient from './program-detail-client';
 

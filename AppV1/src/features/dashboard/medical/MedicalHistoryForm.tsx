@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../../contexts/AuthContext';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { User, Calendar, Scale, Utensils, Heart, Baby, FileText } from 'lucide-react';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface FormData {
   // Personal Biodata
@@ -169,10 +169,10 @@ const MedicalHistoryForm: React.FC = () => {
     // Update form data when user data changes
     if (user) {
       const capitalizedName = user.name ? user.name.split(' ')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
         .join(' ') : '';
       const capitalizedCity = user.city ? user.city.split(' ')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
         .join(' ') : '';
 
       setFormData(prev => ({

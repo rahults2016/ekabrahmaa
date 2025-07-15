@@ -1,12 +1,13 @@
 'use client';
 
-import { Header } from "@/website/sections/whatwehealsection/layout/header";
-import { UniversalFooter } from "@/website/layout/UniversalFooter";
-import { TreatmentCategories } from "@/website/sections/whatwehealsection/TreatmentCategories";
-import { HealingApproach } from "@/website/sections/whatwehealsection/HealingApproach";
-import { SuccessStories } from "@/website/sections/whatwehealsection/SuccessStories";
-import { GettingStarted } from "@/website/sections/whatwehealsection/GettingStarted";
-import { WhatWeDoHeroSection } from "@/website/sections/whatwehealsection/HeroSection";
+import { UniversalFooter } from "@/components/website/layout/UniversalFooter";
+import { GettingStarted } from "@/components/website/sections/whatwehealsection/GettingStarted";
+import { HealingApproach } from "@/components/website/sections/whatwehealsection/HealingApproach";
+import { WhatWeDoHeroSection } from "@/components/website/sections/whatwehealsection/HeroSection";
+import { Header } from "@/components/website/sections/whatwehealsection/layout/header";
+import { SuccessStories } from "@/components/website/sections/whatwehealsection/SuccessStories";
+import { TreatmentCategories } from "@/components/website/sections/whatwehealsection/TreatmentCategories";
+
 
 
 export default function WhatWeHealPage() {

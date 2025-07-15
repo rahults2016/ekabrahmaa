@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent } from '@/website/ui/card';
-import { Button } from '@/website/ui/button';
-import { Badge } from '@/website/ui/badge';
+import { Card, CardContent } from '@/components/website/ui/card';
+import { Button } from '@/components/website/ui/button';
+import { Badge } from '@/components/website/ui/badge';
 import { Star, Heart, MessageCircle, Share2, Play, Instagram, Twitter, Facebook } from 'lucide-react';
-import { ugcPosts } from '@/data/constants';
+import { ugcPosts } from '@/data/website/constants';
 
 // Lazy load images by adding loading="lazy" attribute
 const optimizeImageUrl = (url: string, width = 400) => {

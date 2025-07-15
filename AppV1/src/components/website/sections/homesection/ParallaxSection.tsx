@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useState, useRef, useCallback } from 'react';
-import { Card, CardContent } from '@/website/ui/card';
+import { Card, CardContent } from '@/components/website/ui/card';
 import { Leaf, Sparkles, Users, Clock, Star } from 'lucide-react';
-import { HomeNavButton } from '@/website/HomeNavButtons';
+import { HomeNavButton } from '@/components/website/HomeNavButtons';
 
 // Throttle scroll events for better performance
 const useThrottledScrollY = () => {

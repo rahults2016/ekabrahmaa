@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardHeader, CardTitle, CardContent } from '@/website/ui/card';
-import { Button } from '@/website/ui/button';
-import { Input } from '@/website/ui/input';
-import { Label } from '@/website/ui/label';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/website/ui/card';
+import { Button } from '@/components/website/ui/button';
+import { Input } from '@/components/website/ui/input';
+import { Label } from '@/components/website/ui/label';
 import { CheckCircle } from 'lucide-react';
 
 interface RegistrationFormData {

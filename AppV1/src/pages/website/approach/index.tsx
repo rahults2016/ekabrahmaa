@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { Card, CardContent } from '@/website/ui/card';
-import { Button } from '@/website/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 import { 
   Users, 
@@ -21,7 +21,7 @@ import {
   Quote
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { HealingMethodologyGuide } from '@/website/sections/approach/HealingMethodologyGuide';
+import { HealingMethodologyGuide } from '@/components/website/sections/approach/HealingMethodologyGuide';
 
 // Methodology steps with detailed information
 export const methodologySteps = [

@@ -1,7 +1,6 @@
 'use client';
 
-import { Button } from '@/website/ui/button';
-import { Calendar, Sparkles } from 'lucide-react';
+import { Button } from '@/components/website/ui/button';
 import { Link } from 'react-router-dom';
 
 export const WhatWeDoHeroSection = () => {

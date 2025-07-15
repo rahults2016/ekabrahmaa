@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect, useCallback, memo } from 'react';
-import { Card, CardContent } from '@/website/ui/card';
-import { Badge } from '@/website/ui/badge';
+import { Card, CardContent } from '@/components/website/ui/card';
+import { Badge } from '@/components/website/ui/badge'; 
 import { Instagram, Twitter, Facebook, Heart, MessageCircle, Share2, ExternalLink } from 'lucide-react';
-import { socialPosts } from '@/data/constants';
+import { socialPosts } from '@/data/website/constants';
 
 
 // Optimize image URLs

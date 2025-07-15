@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { HomeNavButton } from '@/website/HomeNavButtons';
+import { HomeNavButton } from '@/components/website/HomeNavButtons';
 import { Sparkles, ArrowDown, Heart, Users, Globe, Award } from 'lucide-react';
 import {  useNavigate } from 'react-router-dom';
 

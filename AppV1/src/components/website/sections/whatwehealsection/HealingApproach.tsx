@@ -1,8 +1,8 @@
 'use client';
 
-import { Card, CardContent } from '@/website/ui/card';
+import { Card, CardContent } from '@/components/website/ui/card';
+import { healingApproach } from '@/data/website/whatWehealConst';
 import { Users} from 'lucide-react';
-import { healingApproach } from '@/data/whatWehealConst';
 
 
 export const HealingApproach = () => {

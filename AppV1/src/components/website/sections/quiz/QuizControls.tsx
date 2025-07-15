@@ -1,5 +1,5 @@
 // src/components/quiz/QuizControls.tsx
-import { Button } from '@/website/ui/button';
+import { Button } from '@/components/website/ui/button';
 import { ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
 
 interface QuizControlsProps {

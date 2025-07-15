@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Button } from '@/website/ui/button';
-import { Card } from '@/website/ui/card';
-import { Badge } from '@/website/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/website/ui/tabs';
-import { Progress } from '@/website/ui/progress';
+import { Button } from '@/components/website/ui/button';
+import { Card } from '@/components/website/ui/card';
+import { Badge } from '@/components/website/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/website/ui/tabs';
+import { Progress } from '@/components/website/ui/progress';
 import { Clock, Users, ArrowRight, CheckCircle, Star, Sparkles, Heart, Leaf,Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { programs } from '@/data/programConst';
+import { programs } from '@/data/website/programConst';
 
 // Enhanced program categories with visual elements
 const programCategories = [

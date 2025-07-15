@@ -1,7 +1,7 @@
 'use client';
 
-import { Button } from '@/website/ui/button';
-import { Input } from '@/website/ui/input';
+import { Button } from '@/components/website/ui/button';
+import { Input } from '@/components/website/ui/input';
 import { 
   Leaf, 
   Mail, 
