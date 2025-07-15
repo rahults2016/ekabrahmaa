@@ -20,6 +20,7 @@ const OurApproachPageSection = lazy(() => import("@/pages/website/approach"));
 const MedicalHistoryForm = lazy(() => import("@/features/dashboard/medical/MedicalHistoryForm"));
 const MedicalHistoryView = lazy(() => import("@/features/dashboard/medical/MedicalHistoryView"));
 const Appointments = lazy(() => import("@/features/dashboard/Appointment/Appointment"));
+const ModernHeaderDemo = lazy(() => import("@/pages/website/demo/ModernHeaderDemo"));
 const TalkToHealer = lazy(() => import("@/features/talktoHealeer/talkTohealer"));
 const Chat = lazy(() => import("@/features/dashboard/Home/components/chat"));
 const Journal = lazy(() => import("@/features/dashboard/Home/components/journal"));
@@ -81,6 +82,10 @@ export const useRoutesConfig = () => {
     {
       path: "/demo/professional",
       element: <ProfessionalDemo />,
+    },
+    {
+      path: "/demo/modern-header",
+      element: <ModernHeaderDemo />,
     },
     {
       path: "/what-we-heal",
