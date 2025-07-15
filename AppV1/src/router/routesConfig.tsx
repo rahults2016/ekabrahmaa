@@ -183,19 +183,19 @@ export const useRoutesConfig = () => {
       authRequired: false,
     },
     {
-      path: "/app/morning-smile",
+      path: "/morning-smile",
       element: <MorningSmile />,
       meta: { breadCrumb: [{ title: "Morning Smile" }] },
       authRequired: false,
     },
     {
-      path: "/app/journal",
+      path: "/journal",
       element: <Journal />,
       meta: { breadCrumb: [{ title: "Journal" }] },
       authRequired: false,
     },
     {
-      path: "/app/chat/group",
+      path: "/chat/group",
       element: <Chat />,
       meta: { breadCrumb: [{ title: "Chat" }] },
       authRequired: false,
