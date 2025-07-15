@@ -60,7 +60,7 @@ export function ModernHeroSection({
   ],
   primaryCta = {
     text: 'Discover Your Healing Team',
-    
+  
     
   },
   secondaryCta = {
@@ -136,7 +136,7 @@ export function ModernHeroSection({
   return (
     <section 
       ref={heroRef}
-      className={`relative overflow-hidden bg-gradient-to-br from-${backgroundColors.from} via-${backgroundColors.via} to-${backgroundColors.to} pt-16 md:pt-24 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 min-h-[90vh] md:min-h-screen flex items-center`}
+      className={`relative overflow-hidden bg-gradient-to-br from-${backgroundColors.from} via-${backgroundColors.via} to-${backgroundColors.to} pt-16 md:pt-10 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 min-h-[90vh] md:min-h-screen flex items-center`}
     >
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 overflow-hidden">

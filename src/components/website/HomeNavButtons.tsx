@@ -95,26 +95,7 @@ export function HomeNavButton({
 }
 
 export function HomepageNavButtons() {
-  return (
-    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <HomeNavButton
-        primary
-        label="Take the Quiz"
-        href="/quiz"
-        icon={<Sparkles className="w-4 h-4" />}
-        ariaLabel="Take the dosha quiz to discover your constitution"
-        trackingCategory="primary_cta"
-      />
-      
-      <HomeNavButton
-        label="Book Consultation"
-        href="/consultation"
-        icon={<Calendar className="w-4 h-4" />}
-        ariaLabel="Book a free consultation with our healers"
-        trackingCategory="secondary_cta"
-      />
-    </div>
-  );
+
 }
 
 export function HomepageExternalButtons() {
